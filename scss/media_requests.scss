@@ -1,0 +1,109 @@
+@import url(./_variables.scss);
+@import url(./_mixin.scss);
+
+
+@media all and (max-width: 1279px) {
+    .headerLinks {
+        margin-right: 10px;
+    }
+
+    .chooseType {
+        grid-template-rows: 170px 170px;
+        grid-template-columns: 170px 170px 170px 170px 170px;
+        grid-gap: 10px;
+    }
+}
+
+@media all and (max-width: 1000px) {
+
+    .headerTitle{
+        font-family: 'Ubuntu', serif;
+        font-size: 19px;
+        color: rgb(255, 255, 255);
+    }
+
+    .headerLinks {
+        margin-right: 5px;
+        font-family: 'Ubuntu', serif;
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .chooseType {
+        grid-template-rows: 170px 170px 170px 170px; 
+        grid-template-columns: 170px 170px 170px;
+        grid-gap: 10px;
+    }
+
+    .chooseNewAdvertisement {
+        grid-row-start: 3;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}
+
+@media all and (max-width: 900px) {
+
+    .headerTitle{
+        font-family: 'Ubuntu', serif;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+    }
+
+    .headerLinks {
+        margin-right: 3px;
+        font-family: 'Ubuntu', serif;
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .headerPhone {
+        margin: 5px 0px;
+        font-family: 'Ubuntu', serif;
+        font-size: 10px;
+        color: white;
+    }
+
+    .chooseType {
+        grid-template-rows: 170px 170px 170px 170px; 
+        grid-template-columns: 170px 170px 170px;
+        grid-gap: 10px;
+    }
+
+    .chooseNewAdvertisement {
+        grid-row-start: 3;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}
+
+@media all and (max-width: 750px) {
+
+    .greetingForm {
+
+        .greetingTitle {
+            font-family: 'Ubuntu', serif;
+            font-size: 30px;
+            color: rgb(21, 29, 18);
+            font-weight: 500;
+        }
+    }
+
+    .chooseType {
+        grid-template-rows: 160px 160px 160px 160px; 
+        grid-template-columns: 140px 140px 140px;
+        grid-gap: 10px;
+    }
+
+    .chooseNewAdvertisement {
+        grid-row-start: 3;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+}
+
+

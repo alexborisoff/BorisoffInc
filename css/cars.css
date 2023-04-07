@@ -1,0 +1,98 @@
+/*Header*/
+.footer, .preFooterSection, .header {
+  display: flex;
+  height: 70px;
+  background-color: rgb(21, 29, 18);
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*Main*/
+/*Footer*/
+body {
+  margin: 0;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 50px;
+  font-family: "Ubuntu", serif;
+  font-size: 26px;
+  color: rgba(21, 29, 18, 0.8);
+  text-align: center;
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+}
+
+.headerImage {
+  height: 40px;
+  width: 40px;
+}
+
+.headerTitle {
+  display: inline-block;
+  min-width: 400px;
+  margin: 0;
+  font-family: "Ubuntu", serif;
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+}
+
+.headerLinks {
+  font-family: "Ubuntu", serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  margin-right: 25px;
+}
+.headerLinks:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.headerPhone {
+  display: block;
+  text-decoration: none;
+  margin: 5px 0px;
+  font-family: "Ubuntu", serif;
+  font-size: 14px;
+  color: white;
+}
+
+.preFooterSection {
+  margin-top: 100px;
+  font-family: "Ubuntu", serif;
+  font-size: 14px;
+  color: white;
+  min-height: 230px;
+}
+.preFooterSection .footerWidget {
+  max-width: 160px;
+}
+.preFooterSection img {
+  height: 18px;
+  width: 18px;
+}
+
+.footer {
+  position: relative;
+  bottom: 0px;
+  font-family: "Ubuntu", serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.middleSection {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*# sourceMappingURL=cars.css.map */

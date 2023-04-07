@@ -1,0 +1,32 @@
+/*Header*/
+
+%headerAndFooter {
+    display: flex;
+    height: 70px;
+    background-color: rgb(21, 29, 18);
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Main*/
+%centerAlign {
+    width: calc(100% - 100px); 
+    margin: 0 auto;
+}
+
+%animationGrid {
+    box-shadow: 0px 0px 18px rgb(149, 235, 254);
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+%inputBorder {
+    border: 1px solid rgb(21, 29, 18);;
+    border-radius: 0px;
+}
+
+%flex {
+    display: flex;
+    justify-content: center;
+}
+/*Footer*/

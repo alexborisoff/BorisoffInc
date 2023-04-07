@@ -1,0 +1,435 @@
+@import './mixin.scss';
+@import './extensions.scss';
+@import './variables.scss';
+
+body {
+    margin: 0;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 50px;
+    @include font('Ubuntu', serif, 26px, rgba(21, 29, 18, 0.8));
+    text-align: center;
+}
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    @extend %headerAndFooter;
+}
+
+.headerImage { 
+    height: 40px;
+    width: 40px;
+}
+
+.headerTitle {
+    display: inline-block;
+    min-width: 200px;
+    margin: 0;
+    @include font('Ubuntu', serif, 22px, $titleColor);
+}
+
+.headerLinks {
+    @include font('Ubuntu', serif, 18px, $darkeringColor);
+    text-decoration: none;
+    margin-right: 25px;
+
+    &:hover {
+        cursor: pointer;
+        color: white;
+    }
+}
+
+.headerPhone {
+    display: block;
+    text-decoration: none;
+    margin: 5px 0px;
+    @include font('Ubuntu', serif, 14px, white);
+}
+
+//Main
+
+.greetingForm {
+    margin-top: 100px;
+    @extend %flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 600px;
+
+    .greetingTitle {
+        @include font('Ubuntu', serif, 40px, $mainColor);
+        font-weight: 500;
+    }
+
+    .greetingDescription {
+        max-width: 700px;
+        text-align: center;
+        @include font('Ubuntu', serif, 18px, $mainColor);
+    }
+}
+
+.line {
+    width: 250px;
+    border-bottom: 2px solid $mainColor;
+}
+
+.blueForGrid {
+    background-color: $gridColor;
+}
+
+.chooseType {
+    display: grid;
+    grid-template-rows: 170px 170px;
+    grid-template-columns: 220px 220px 220px 220px 220px;
+    grid-gap: 10px;
+}
+
+.positionChooseType {
+    margin-top: 100px;
+    @extend %centerAlign;
+    @extend %flex;
+    padding: 120px 0px;
+    background: url(../images/backgroundGrid.png) no-repeat ;
+    background-size: cover;
+    border-radius: 15px 90px;
+}
+
+.chooseCars {
+    margin: 0;
+    border-radius: 5px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    &:hover {
+        @extend %animationGrid;
+    }
+}
+
+.carImage {
+    text-align: center;
+}
+
+.chooseMotorcycles {
+    border-radius: 5px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    &:hover {
+        @extend %animationGrid;
+    }
+}
+
+.chooseExclusiveСars {
+    border-radius: 5px;
+
+    &:hover {
+        @extend %animationGrid;
+    }
+}
+
+.chooseOldCars {
+    border-radius: 5px;
+
+    &:hover {
+        @extend %animationGrid;
+    }
+}
+
+.chooseNewAdvertisement {
+    border-radius: 5px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 6;
+
+    &:hover {
+        @extend %animationGrid;
+    }
+}
+
+.searchSection {
+    background-color: rgb(217, 217, 217);
+    margin-top: 150px;
+    border: 3px solid rgba(21, 29, 18, 0.4);
+    border-radius: 2px 20px;
+    @extend %centerAlign;
+}
+
+.selectSearch {
+    display: inline-block;   
+    padding-left: 10px;
+    
+    select {
+        padding: 8px 12px 9px 12px;
+        border: none;
+    }
+}
+
+.singleSelect {
+    position: relative;
+    width: 15%;
+
+    select {
+        width: 100%;
+        @include font('Ubuntu', serif, 15px, $mainColor)
+    }
+}
+
+.doubleSelect {
+    margin: 0;
+
+    p {
+        border: 1px solid white;
+        @include font('Ubuntu', serif, 15px, $mainColor);
+        padding: 0px 8px;
+        position: relative;
+        display: inline-block;
+        background-color: rgb(255, 255, 255);
+    }
+
+}
+
+.btnSearch {
+    background-color: $mainColor;
+    border: 1px solid $mainColor;
+    border-bottom-right-radius: 15px;
+    padding: 6px 10px 9px 10px;
+    width: 9%;
+    @include font('Ubuntu', serif, 15px, $titleColor);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.catalog {
+    display: flex;
+    @extend %centerAlign;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.carsList {
+    min-height: 300px;
+    min-width: 160px;
+    margin: 15px 0px;
+    width: 20%;
+    @include font('Ubuntu', serif, 15px, rgba(21, 29, 18, 0.8));
+
+    &:hover {
+        @extend %animationGrid;
+        box-shadow: 0px 0px 18px #e2e2e2;
+    }
+
+    .productName p span::after {
+        content: ",";
+    }
+
+    .productName p span:last-child::after {
+        content: "";
+    }
+}
+
+.carsList a{
+    text-decoration: none;
+    
+    &:visited {
+        color: black;
+    }
+}
+
+.productImage {
+    height: 175px;
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.productName {
+    strong {
+        padding: 3px 10px;
+        min-height: 54px;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    p {
+        padding: 10px 10px;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    span {
+        font-size: 14px;
+    }
+}
+
+.price {
+    padding: 3px 10px;
+    @include font('Ubuntu', serif, 18px, green);
+    font-weight: 700;
+}
+
+.priceInEuro {
+    margin-left: 18px;
+    color: black;
+    font-weight: 400;
+}
+
+.yandexMap {
+    @extend %centerAlign;
+}
+
+iframe {
+    width: 100%;
+    margin: 0 auto;
+    height: 400px;
+}
+
+.reviews {
+    @include font('Ubuntu', serif, 18px, $mainColor);
+    @extend %flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .reviewWidget {
+        width: 450px;
+
+        p {
+            text-align: center;
+        }
+
+        .customer {
+            @extend %flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+        }
+
+        span {
+            margin: 0px 10px;
+            display: inline-block;
+            @include font('Ubuntu', serif, 14px, $mainColor);
+        }
+
+        
+    }
+}
+
+.animationTitle {
+    width: 120px;
+    margin: 0 auto;
+    
+    h4 {
+        padding-right: 1px;
+        margin-top: 100px;
+        @include font('Ubuntu', serif, 26px, rgba(21, 29, 18, 0.8));
+        border-right: 2px solid black;
+        text-align: center;
+        animation: cursorForAnimation 1s infinite step-end;
+
+        @keyframes cursorForAnimation{
+            0%, 100%{border-color: transparent;}
+            50%{border-color: #000;}
+        }
+    
+        animation: cursorForAnimation 1s infinite step-end, typing 8s infinite steps(9);
+        white-space: nowrap;
+        overflow: hidden;
+    
+        @keyframes typing{
+            0%{ width: 0ch} 
+            30%{ width: 9ch;} 
+            80%{ width: 9ch;} 
+            90%{ width: 0ch;} 
+            100%{ width: 0ch;} 
+        }
+    }
+}
+
+#contactUsForm {
+    border: 1px solid $mainColor;
+    width: 400px;
+    margin: 0 auto;
+
+    .nameEmailSection {
+        @extend %flex;
+    }
+
+    input {
+        
+        padding: 19px;
+        @extend %inputBorder;
+        width: 160px;
+        @include font('Anonymous Pro', sans-serif, 12px, $mainColor)     
+    }
+
+    textarea {
+        margin: 0;
+        padding: 18px;
+        @extend %inputBorder;
+        @include font('Anonymous Pro', sans-serif, 12px, $mainColor);
+        width: 362px;
+        height: 120px;
+        resize: none;
+    }
+
+    .btnSubmit {
+        width: 100%;
+        @include font('Anonymous Pro', sans-serif, 12px, $mainColor);
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+.size {
+    height: 158px;
+}
+
+.preFooterSection {
+    margin-top: 100px;
+    @include font('Ubuntu', serif, 14px, white);
+    @extend %headerAndFooter;
+    min-height: 230px;  
+
+    .footerWidget {
+        max-width: 160px;
+    } 
+
+    img {
+        height: 18px;
+        width: 18px;
+    }
+}
+
+//Footer 
+.footer {
+    position: relative;
+    bottom: 0px;
+    @include font('Ubuntu', serif, 14px, $darkeringColor);
+    @extend %headerAndFooter;
+}
+
+.middleSection {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}

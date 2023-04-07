@@ -1,0 +1,90 @@
+@import './mixin.scss';
+@import './extensions.scss';
+@import './variables.scss';
+
+body {
+    margin: 0;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 50px;
+    @include font('Ubuntu', serif, 26px, rgba(21, 29, 18, 0.8));
+    text-align: center;
+}
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    @extend %headerAndFooter;
+}
+
+.headerImage { 
+    height: 40px;
+    width: 40px;
+}
+
+.headerTitle {
+    display: inline-block;
+    min-width: 400px;
+    margin: 0;
+    @include font('Ubuntu', serif, 22px, $titleColor);
+}
+
+.headerLinks {
+    @include font('Ubuntu', serif, 18px, $darkeringColor);
+    text-decoration: none;
+    margin-right: 25px;
+
+    &:hover {
+        cursor: pointer;
+        color: white;
+    }
+}
+
+.headerPhone {
+    display: block;
+    text-decoration: none;
+    margin: 5px 0px;
+    @include font('Ubuntu', serif, 14px, white);
+}
+
+
+
+
+.preFooterSection {
+    margin-top: 100px;
+    @include font('Ubuntu', serif, 14px, white);
+    @extend %headerAndFooter;
+    min-height: 230px;  
+
+    .footerWidget {
+        max-width: 160px;
+    } 
+
+    img {
+        height: 18px;
+        width: 18px;
+    }
+}
+
+
+.footer {
+    position: relative;
+    bottom: 0px;
+    @include font('Ubuntu', serif, 14px, $darkeringColor);
+    @extend %headerAndFooter;
+}
+
+.middleSection {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
